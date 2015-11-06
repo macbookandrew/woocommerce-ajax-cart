@@ -21,6 +21,9 @@ jQuery(document).ready(function($){
         
         // disable the checkout button
         $("a.checkout-button.wc-forward").attr('disabled',true).addClass('disabled').html('Updating…');
+        
+        // disable all quantity inputs
+        $("input.qty").attr('disabled',true);
 
         $.post( form.attr('action'), formData, function(resp) {
                 // ajax response
@@ -35,6 +38,8 @@ jQuery(document).ready(function($){
                 $("input[name='update_cart']").val(resp.update_label).prop('disabled', false);
 
                 $("a.checkout-button.wc-forward").removeClass('disabled').attr('disabled',false).html(resp.checkout_label);
+
+                $("input.qty").attr('disabled',false);
 
                 // when changes to 0, remove the product from cart
                 if ( el_qty.val() == 0 ) {
