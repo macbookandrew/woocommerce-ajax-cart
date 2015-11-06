@@ -42,6 +42,7 @@ function wac_update() {
     if ( !empty($_POST['is_wac_ajax'])) {
         $resp = array();
         $resp['update_label'] = __( 'Update Cart', 'woocommerce' );
+        $resp['checkout_label'] = __( 'Proceed to Checkout', 'woocommerce' );
         $resp['price'] = 0;
         
         // render the cart totals (cart-totals.php)

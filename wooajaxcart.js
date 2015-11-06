@@ -16,7 +16,9 @@ jQuery(document).ready(function($){
         // get the form data before disable button...
         formData = form.serialize();
         
-        $("input[name='update_cart']").val('Updating...').prop('disabled', true);
+        $("input[name='update_cart']").val('Updating…').prop('disabled', true);
+
+        $("a.checkout-button.wc-forward").addClass('disabled').html('Updating…');
 
         $.post( form.attr('action'), formData, function(resp) {
                 // ajax response
@@ -29,6 +31,8 @@ jQuery(document).ready(function($){
                 $('#cart_item_key').remove();
                 
                 $("input[name='update_cart']").val(resp.update_label).prop('disabled', false);
+
+                $("a.checkout-button.wc-forward").removeClass('disabled').html(resp.checkout_label);
 
                 // when changes to 0, remove the product from cart
                 if ( el_qty.val() == 0 ) {
