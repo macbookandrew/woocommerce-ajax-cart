@@ -1,9 +1,9 @@
 === WooCommerce Ajax Cart Plugin ===
-Contributors: moiseh
+Contributors: moiseh, macbookandrew
 Tags: woocommerce, ajax, cart, shipping
 Requires at least: 3.0.1
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GLS9CZZD6V828&lc=BR&item_name=Moiseh&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tested up to: 3.4
+Tested up to: 4.3.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,6 +35,9 @@ Demonstration url: http://ragob.com/wooajaxcart/ (follow the green instructions)
 
 = 1.1 =
 * Remove product from cart automatically (AJAX) when changes quantity to zero
+
+= 1.2 =
+* Check for min/max values before submitting the form
 
 == Frequently Asked Questions ==
 

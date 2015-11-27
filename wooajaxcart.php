@@ -3,7 +3,7 @@
   Plugin Name: Woo AJAX Cart
   Plugin URI: http://ragob.com/wooajaxcart
   Description: Change the default behavior of WooCommerce Cart page, making AJAX requests when quantity field changes
-  Version: 1.1
+  Version: 1.2
   Author: Moises Heberle
   Author URI: http://codecanyon.net/user/moiseh
  */

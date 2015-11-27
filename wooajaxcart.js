@@ -2,6 +2,23 @@ jQuery(document).ready(function($){
     $('.qty').on('change', function(){
         form = $(this).closest('form');
 
+        // check for min/max values and reset if out of range
+        var min = $(this).attr('min');
+        var max = $(this).attr('max');
+
+        if ( (min.length > -1) || (max.length > -1) ) {
+            // handle quantities below min
+            if ( Number($(this).val()) < min ) {
+                $(this).val(min);
+                return;
+            }
+            // handle quantities above max
+            if ( Number($(this).val()) > max ) {
+                $(this).val(max);
+                return;
+            }
+        }
+
         // emulates button Update cart click
         $("<input type='hidden' name='update_cart' id='update_cart' value='1'>").appendTo(form);
         
